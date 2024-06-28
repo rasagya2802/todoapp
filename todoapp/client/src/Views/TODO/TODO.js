@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import Styles from './TODO.module.css';
-import { dummy } from './dummy';
 import axios from 'axios';
-
 
 export function TODO(props) {
     const [newTodo, setNewTodo] = useState('');
@@ -187,7 +185,8 @@ export function TODO(props) {
                                             toggleDone(entry._id);
                                         }}
                                     />
-                                    {entry.title}
+                                    <div className={Styles.title}>{entry.title}</div>
+                                    <div className={Styles.description}>{entry.description}</div>
                                 </span>
                                 <span
                                     style={{ cursor: 'pointer' }}

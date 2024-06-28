@@ -28,10 +28,10 @@
     font-weight: 700;
     transition: all 0.3s linear;
     box-shadow: 1px 1px 4px 2px rgb(0, 0, 0, 0.1);
+}
 
-    &:hover {
-        box-shadow: 1px 1px 4px 2px rgb(0, 0, 0, 0.4);
-    }
+.addButton:hover {
+    box-shadow: 1px 1px 4px 2px rgb(0, 0, 0, 0.4);
 }
 
 .todoContainer {
@@ -47,30 +47,39 @@
     overflow-y: auto;
 }
 
-
 .todo {
     background-color: white;
-
     padding: 8px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     box-shadow: 1px 1px 4px 2px rgb(0, 0, 0, 0.1);
     justify-content: space-between;
-    max-height: 2em;
+    max-height: fit-content;
+}
 
-    input {
-        margin-right: 8px;
-        height: 20px;
-        width: 20px;
-    }
+.todo input {
+    margin-right: 8px;
+    height: 20px;
+    width: 20px;
 }
 
 .infoContainer {
     width: 90%;
+}
+
+.title {
     font-size: x-large;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+
+.description {
+    font-size: large;
+    color: #666;
+    margin-top: 4px;
+    margin-left: 28px;
+    word-wrap: break-word;
 }
 
 .todoInput {
